@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Your Nebula | NASA APOD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <main class="container">
+        <header>
+            <h1>Cosmic Birthday</h1>
+            <p>Discover the universe on the day you were born based on NASA's Astronomy Picture of the Day.</p>
+        </header>
+
+        <section class="search-section">
+            <form id="apod-form">
+                <div class="input-group">
+                    <label for="birthdate">Enter your birthdate</label>
+                    <input type="date" id="birthdate" name="birthdate" required max="" min="1995-06-16">
+                </div>
+                <button type="submit" class="glow-on-hover">Explore the Cosmos</button>
+            </form>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Establishing connection to NASA...</p>
+            </div>
+            <div id="error-message" class="error hidden"></div>
+        </section>
+
+        <section id="result-section" class="result-section hidden">
+            <div class="glass-card">
+                <h2 id="apod-title"></h2>
+                <div class="media-container">
+                    <img id="apod-image" src="" alt="Astronomy Picture of the Day" class="hidden">
+                    <iframe id="apod-video" src="" frameborder="0" allowfullscreen class="hidden"></iframe>
+                </div>
+                <div class="info-content">
+                    <p class="date-badge" id="apod-date-display"></p>
+                    <div class="explanation">
+                        <p id="apod-explanation"></p>
+                    </div>
+                </div>
+                <p class="copyright" id="apod-copyright"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
